@@ -10,15 +10,21 @@ import java.util.Arrays;
 import java.util.List;
 
 public class DataLoadUtil {
+
     public static List<Long> loadLongList(String resourceName) {
+        List<String> lines = loadStringList(resourceName);
+        List<Long> numbers = new ArrayList<>();
+        lines.forEach(s -> numbers.add(Long.parseLong(s)));
+        return numbers;
+    }
+
+    public static List<String> loadStringList(String resourceName) {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         InputStream input = classLoader.getResourceAsStream(resourceName);
         if (input != null) {
             try {
                 List<String> lines = IOUtils.readLines(input, "UTF-8");
-                List<Long> numbers = new ArrayList<>();
-                lines.forEach(s -> numbers.add(Long.parseLong(s)));
-                return numbers;
+                return lines;
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -36,8 +42,8 @@ public class DataLoadUtil {
                 List<String> strings = Arrays.asList(delimitedStringArray);
                 List<Integer> numbers = new ArrayList<>();
                 strings.forEach(s -> {
-                        numbers.add(Integer.parseInt(s));
-                }
+                            numbers.add(Integer.parseInt(s));
+                        }
                 );
                 return numbers;
             } catch (IOException e) {

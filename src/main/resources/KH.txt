@@ -1,0 +1,14 @@
+day3 - BinaryDiagnostic
+(number >> bitPos) & 1; -- checking teh number if the bit on bitPos = 1
+integerList.removeIf(s -> checkBitOnPos(s, currentPosition) != currentBit); -- removing element from the list whn condition is filled
+
+day5
+int[][] array = new int[n][m]   - n - row, m - column
+diagram.length      - number of rows
+diagram[x].length   - number of columns in x row
+
+day6
+Map<Integer, Long> sumMap = new LinkedHashMap<>();
+sumMap.containsKey(key)
+sumMap.get(key);
+sumMap.put(key, val);

@@ -12,3 +12,10 @@ Map<Integer, Long> sumMap = new LinkedHashMap<>();
 sumMap.containsKey(key)
 sumMap.get(key);
 sumMap.put(key, val);
+
+day 7 -past function as a parameter
+private interface CalcReqFuel {int calcFuel(int startLevel, int reqLevel);}
+    CalcReqFuel part2= (a, b) -> {
+        int n = Math.abs(a - b);
+        return (n + 1) * n / 2;};
+public int calcFuelConsumption(CalcReqFuel calcFunction) {sumOfFuel += calcFunction.calcFuel(level,i);}

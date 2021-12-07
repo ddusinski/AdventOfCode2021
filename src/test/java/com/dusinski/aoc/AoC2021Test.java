@@ -6,6 +6,7 @@ import com.dusinski.aoc.solutions.day3.BinaryDiagnostic;
 import com.dusinski.aoc.solutions.day4.GiantSquidBingo;
 import com.dusinski.aoc.solutions.day5.HydrothermalVenture;
 import com.dusinski.aoc.solutions.day6.Lanternfish;
+import com.dusinski.aoc.solutions.day7.WhalesTreachery;
 import org.apache.commons.lang3.time.StopWatch;
 import org.junit.Test;
 
@@ -79,6 +80,17 @@ public class AoC2021Test {
 //        assertEquals(1721148811504L, lf.getIterative(256));
         watch.stop();
         System.out.println("Day 6 time elapsed: " + watch.getTime());
+    }
+
+    @Test
+    public void testWhalesTreachery() {
+        StopWatch watch = new StopWatch();
+        watch.start();
+        WhalesTreachery wt = new WhalesTreachery();
+        assertEquals(343605, wt.getLeastFuelPossiblePart1());
+        assertEquals(96744904, wt.getLeastFuelPossiblePart2());
+        watch.stop();
+        System.out.println("Day 7 time elapsed: " + watch.getTime());
     }
 
 

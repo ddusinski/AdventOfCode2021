@@ -1,5 +1,5 @@
 day3 - BinaryDiagnostic
-(number >> bitPos) & 1; -- checking teh number if the bit on bitPos = 1
+(number >> bitPos) & 1; -- checking the number if the bit on bitPos = 1
 integerList.removeIf(s -> checkBitOnPos(s, currentPosition) != currentBit); -- removing element from the list whn condition is filled
 
 day5
@@ -19,3 +19,17 @@ private interface CalcReqFuel {int calcFuel(int startLevel, int reqLevel);}
         int n = Math.abs(a - b);
         return (n + 1) * n / 2;};
 public int calcFuelConsumption(CalcReqFuel calcFunction) {sumOfFuel += calcFunction.calcFuel(level,i);}
+
+day 8
+this.signalPattern.addAll(Arrays.asList(sPattern)); -- adds array into a list
+String sPattern = input.split(" \\| ")[0]; -- pipeline is a special char which must be escaped
+Set<Character> characterSet = s.chars().mapToObj(e -> (char) e).collect(Collectors.toSet());  -- changing String into Set<Character>
+testedDigit.removeAll(this.digitSignalSetMap.get(comparingNumber));     -- removing one set from another one
+for (Map.Entry<Integer, Set<Character>> mapEntry : this.digitSignalSetMap.entrySet()) {     -- looping thorough MAP using Map.Entry
+                if (digit.equals(mapEntry.getValue())) {                        -- comparing two sets
+                    result = mapEntry.getKey();}}                   -- getting key of the map
+
+day9
+basinSumList.sort(Collections.reverseOrder()); -- sorting list, reversed order
+new Point(i, j) -- class from awt library to store (x,y)
+

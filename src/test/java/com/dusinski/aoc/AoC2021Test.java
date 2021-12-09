@@ -7,6 +7,8 @@ import com.dusinski.aoc.solutions.day4.GiantSquidBingo;
 import com.dusinski.aoc.solutions.day5.HydrothermalVenture;
 import com.dusinski.aoc.solutions.day6.Lanternfish;
 import com.dusinski.aoc.solutions.day7.WhalesTreachery;
+import com.dusinski.aoc.solutions.day8.SevenSegmentSearch;
+import com.dusinski.aoc.solutions.day9.SmokeBasin;
 import org.apache.commons.lang3.time.StopWatch;
 import org.junit.Test;
 
@@ -93,5 +95,28 @@ public class AoC2021Test {
         System.out.println("Day 7 time elapsed: " + watch.getTime());
     }
 
+    @Test
+    public void testSevenSegmentSearch() {
+        StopWatch watch = new StopWatch();
+        watch.start();
+        SevenSegmentSearch sss = new SevenSegmentSearch();
+        assertEquals(344, sss.getEasyDigitsPart1());
+        assertEquals(1048410, sss.getEasyDigitsPart2SET());
+        watch.stop();
+        System.out.println("Day 8 time elapsed: " + watch.getTime());
+    }
+
+    @Test
+    public void testSmokeBasinSum() {
+        StopWatch watch = new StopWatch();
+        watch.start();
+        SmokeBasin sb = new SmokeBasin();
+        assertEquals(436, sb.getRiskLevelSum());
+        assertEquals(1317792, sb.getSize3LargestBasins());
+        watch.stop();
+        System.out.println("Day 9 time elapsed: " + watch.getTime());
+    }
+
+//
 
 }

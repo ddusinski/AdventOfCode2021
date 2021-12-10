@@ -33,3 +33,9 @@ day9
 basinSumList.sort(Collections.reverseOrder()); -- sorting list, reversed order
 new Point(i, j) -- class from awt library to store (x,y)
 
+day10
+Stack<Chunk> chunkStack = new Stack<>();
+chunkStack.push(c); -- adds element
+chunkStack.peek(); -- check top element but not remove
+chunkStack.pop(); -- take and remove top element
+

@@ -1,5 +1,6 @@
 package com.dusinski.aoc;
 
+import com.dusinski.aoc.solutions.day10.SyntaxScoring;
 import com.dusinski.aoc.solutions.day7.WhalesTreachery;
 import com.dusinski.aoc.solutions.day8.SevenSegmentSearch;
 import com.dusinski.aoc.solutions.day9.SmokeBasin;
@@ -19,9 +20,14 @@ public class AoC2021 {
 //                System.out.println("Easy dict count: " + sss.getEasyDigitsPart2());
 //                System.out.println("Easy dict count: " + sss.getEasyDigitsPart2SET());
 
-        SmokeBasin sb = new SmokeBasin();
+//        SmokeBasin sb = new SmokeBasin();
 //        System.out.println("getRiskLevelSum: " + sb.getRiskLevelSum());
-        System.out.println("getRiskLevelSum: " + sb.getSize3LargestBasins());
+//        System.out.println("getRiskLevelSum: " + sb.getSize3LargestBasins());
+
+
+        SyntaxScoring ss = new SyntaxScoring();
+//        System.out.println("getTotalSyntaxErrorScore(): " + ss.getTotalSyntaxErrorScore());
+        System.out.println("getTotalSyntaxErrorScore(): " + ss.getMiddleStorePart2());
 
     }
 }

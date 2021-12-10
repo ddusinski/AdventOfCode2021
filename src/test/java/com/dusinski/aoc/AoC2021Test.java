@@ -1,6 +1,7 @@
 package com.dusinski.aoc;
 
 import com.dusinski.aoc.solutions.day1.SonarSweep;
+import com.dusinski.aoc.solutions.day10.SyntaxScoring;
 import com.dusinski.aoc.solutions.day2.Dive;
 import com.dusinski.aoc.solutions.day3.BinaryDiagnostic;
 import com.dusinski.aoc.solutions.day4.GiantSquidBingo;
@@ -117,6 +118,14 @@ public class AoC2021Test {
         System.out.println("Day 9 time elapsed: " + watch.getTime());
     }
 
-//
-
+    @Test
+    public void testSyntaxScoring() {
+        StopWatch watch = new StopWatch();
+        watch.start();
+        SyntaxScoring ss = new SyntaxScoring();
+        assertEquals(394647, ss.getTotalSyntaxErrorScore());
+        assertEquals(2380061249L, ss.getMiddleStorePart2());
+        watch.stop();
+        System.out.println("Day 10 time elapsed: " + watch.getTime());
+    }
 }

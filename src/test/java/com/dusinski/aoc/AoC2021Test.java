@@ -2,6 +2,7 @@ package com.dusinski.aoc;
 
 import com.dusinski.aoc.solutions.day1.SonarSweep;
 import com.dusinski.aoc.solutions.day10.SyntaxScoring;
+import com.dusinski.aoc.solutions.day11.DumboOctopus;
 import com.dusinski.aoc.solutions.day2.Dive;
 import com.dusinski.aoc.solutions.day3.BinaryDiagnostic;
 import com.dusinski.aoc.solutions.day4.GiantSquidBingo;
@@ -128,4 +129,19 @@ public class AoC2021Test {
         watch.stop();
         System.out.println("Day 10 time elapsed: " + watch.getTime());
     }
+
+    @Test
+    public void testSDumboOctopus() {
+        StopWatch watch = new StopWatch();
+        watch.start();
+        DumboOctopus dOct = new DumboOctopus();
+        assertEquals(314, dOct.getStepWhenAllFlash());
+        assertEquals(1591, dOct.getFlashesAfter100Steps());
+        watch.stop();
+        System.out.println("Day 11 time elapsed: " + watch.getTime());
+    }
+
+
+//    getFlashesAfter100Steps(): 314
+
 }

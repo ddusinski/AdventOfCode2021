@@ -3,6 +3,8 @@ package com.dusinski.aoc;
 import com.dusinski.aoc.solutions.day1.SonarSweep;
 import com.dusinski.aoc.solutions.day10.SyntaxScoring;
 import com.dusinski.aoc.solutions.day11.DumboOctopus;
+import com.dusinski.aoc.solutions.day12.PassagePathing;
+import com.dusinski.aoc.solutions.day13.TransparentOrigami;
 import com.dusinski.aoc.solutions.day2.Dive;
 import com.dusinski.aoc.solutions.day3.BinaryDiagnostic;
 import com.dusinski.aoc.solutions.day4.GiantSquidBingo;
@@ -141,7 +143,36 @@ public class AoC2021Test {
         System.out.println("Day 11 time elapsed: " + watch.getTime());
     }
 
+//    @Test
+//    public void testPassagePathing() {
+//        StopWatch watch = new StopWatch();
+//        watch.start();
+//        PassagePathing pp = new PassagePathing();
+//        assertEquals(3576, pp.getPathsCount());
+//        watch.stop();
+//        System.out.println("Day 12 time elapsed: " + watch.getTime());
+//    }
 
-//    getFlashesAfter100Steps(): 314
+    @Test
+    public void testTransparentOrigami() {
+        StopWatch watch = new StopWatch();
+        watch.start();
+        TransparentOrigami to = new TransparentOrigami();
+
+        String result="###..####.####...##.#..#.###..####.####\n" +
+                "#..#....#.#.......#.#..#.#..#.#.......#\n" +
+                "#..#...#..###.....#.####.#..#.###....#.\n" +
+                "###...#...#.......#.#..#.###..#.....#..\n" +
+                "#....#....#....#..#.#..#.#.#..#....#...\n" +
+                "#....####.#.....##..#..#.#..#.#....####\n";
+
+        assertEquals(610, to.getDotsCountAfterOneFold());
+        assertEquals(result, to.getDotsCountAfterAllFolds());
+        watch.stop();
+        System.out.println("Day 13 time elapsed: " + watch.getTime());
+    }
+
+
+//    getPathsCount(): 3576
 
 }

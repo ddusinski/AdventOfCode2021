@@ -32,25 +32,59 @@ public class DataLoadUtil {
         return null;
     }
 
-    public static List<Integer> loadDelimitedStringToList(String resourceName) {
+    public static String loadStringLine(String resourceName) {
+        return loadLine(resourceName);
+    }
+
+    private static String loadLine(String resourceName) {
+        String result;
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         InputStream input = classLoader.getResourceAsStream(resourceName);
         if (input != null) {
             try {
                 String string = IOUtils.toString(input, StandardCharsets.UTF_8);
-                String[] delimitedStringArray = string.split(",");
-                List<String> strings = Arrays.asList(delimitedStringArray);
-                List<Integer> numbers = new ArrayList<>();
-                strings.forEach(s -> {
-                            numbers.add(Integer.parseInt(s));
-                        }
-                );
-                return numbers;
+
+                return string;
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
         return null;
     }
+
+    public static List<Integer> loadDelimitedStringToList(String resourceName) {
+        String string = loadLine(resourceName);
+        String[] delimitedStringArray = string.split(",");
+        List<String> strings = Arrays.asList(delimitedStringArray);
+        List<Integer> numbers = new ArrayList<>();
+        strings.forEach(s -> {
+                    numbers.add(Integer.parseInt(s));
+                }
+        );
+
+        return numbers;
+    }
+
+
+//    public static List<Integer> loadDelimitedStringToList(String resourceName) {
+//        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+//        InputStream input = classLoader.getResourceAsStream(resourceName);
+//        if (input != null) {
+//            try {
+//                String string = IOUtils.toString(input, StandardCharsets.UTF_8);
+//                String[] delimitedStringArray = string.split(",");
+//                List<String> strings = Arrays.asList(delimitedStringArray);
+//                List<Integer> numbers = new ArrayList<>();
+//                strings.forEach(s -> {
+//                            numbers.add(Integer.parseInt(s));
+//                        }
+//                );
+//                return numbers;
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//        return null;
+//    }
 
 }

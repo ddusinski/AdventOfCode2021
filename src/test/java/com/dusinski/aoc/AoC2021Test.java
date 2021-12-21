@@ -3,8 +3,9 @@ package com.dusinski.aoc;
 import com.dusinski.aoc.solutions.day1.SonarSweep;
 import com.dusinski.aoc.solutions.day10.SyntaxScoring;
 import com.dusinski.aoc.solutions.day11.DumboOctopus;
-import com.dusinski.aoc.solutions.day12.PassagePathing;
 import com.dusinski.aoc.solutions.day13.TransparentOrigami;
+import com.dusinski.aoc.solutions.day15.Chiton;
+import com.dusinski.aoc.solutions.day17.TrickShot;
 import com.dusinski.aoc.solutions.day2.Dive;
 import com.dusinski.aoc.solutions.day3.BinaryDiagnostic;
 import com.dusinski.aoc.solutions.day4.GiantSquidBingo;
@@ -173,6 +174,28 @@ public class AoC2021Test {
     }
 
 
-//    getPathsCount(): 3576
+    @Test
+    public void testChitonGraph() {
+        StopWatch watch = new StopWatch();
+        watch.start();
+        Chiton chiton = new Chiton();
+        assertEquals(361, chiton.genGraphPart1());
+//        assertEquals(3570, ts.getMaxHigh());
+        watch.stop();
+        System.out.println("Day 15 time elapsed: " + watch.getTime());
+    }
+
+
+
+    @Test
+    public void testTrickShot() {
+        StopWatch watch = new StopWatch();
+        watch.start();
+        TrickShot ts = new TrickShot();
+        assertEquals(1919, ts.getPossibleVelCount());
+        assertEquals(3570, ts.getMaxHigh());
+        watch.stop();
+        System.out.println("Day 17 time elapsed: " + watch.getTime());
+    }
 
 }

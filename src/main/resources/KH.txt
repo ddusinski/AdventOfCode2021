@@ -39,3 +39,15 @@ chunkStack.push(c); -- adds element
 chunkStack.peek(); -- check top element but not remove
 chunkStack.pop(); -- take and remove top element
 
+day 14
+linked list - no memory limits
+
+day15
+Graph - Distra - to analise
+
+day16
+String "1234".substring(0,3) = "012" - last argument 3 omitted
+
+day17
+targetMinX = Integer.parseInt(xPart.split("\\.\\.")[0]); -- escaping dot
+pointList.sort(Comparator.comparing(Point::getX)); -- sorting using object's methods
